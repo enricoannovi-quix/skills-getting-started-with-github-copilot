@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p>${details.description}</p>
           <p><strong>Schedule:</strong> ${details.schedule}</p>
           <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
+          <p><strong>Participants:</strong> ${details.participants.join(", ") || "None"}</p>
         `;
 
         activitiesList.appendChild(activityCard);
@@ -79,6 +80,16 @@ document.addEventListener("DOMContentLoaded", () => {
       messageDiv.classList.remove("hidden");
       console.error("Error signing up:", error);
     }
+  });
+
+  // Add dark mode toggle
+  const darkModeToggle = document.createElement("button");
+  darkModeToggle.textContent = "Toggle Dark Mode";
+  darkModeToggle.id = "dark-mode-toggle";
+  document.body.appendChild(darkModeToggle);
+
+  darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
   });
 
   // Initialize app
