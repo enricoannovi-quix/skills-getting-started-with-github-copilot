@@ -82,6 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Add dark mode toggle
+  const darkModeToggle = document.createElement("button");
+  darkModeToggle.textContent = "Toggle Dark Mode";
+  darkModeToggle.id = "dark-mode-toggle";
+  document.body.appendChild(darkModeToggle);
+
+  darkModeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+  });
+
   // Initialize app
   fetchActivities();
 });
