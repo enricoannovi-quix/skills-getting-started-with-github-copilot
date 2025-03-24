@@ -201,3 +201,36 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+.participant-info {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+body.dark-mode .participant-info {
+  background-color: #2c2c2c;
+  border-color: #444;
+  color: #e0e0e0;
+}
+
+.participant-info h4 {
+  margin-bottom: 10px;
+  color: #0066cc;
+}
+
+body.dark-mode .participant-info h4 {
+  color: #80d8ff;
+}
+
+.participant-info p {
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+body.dark-mode .participant-info p {
+  color: #b0bec5;
+}
